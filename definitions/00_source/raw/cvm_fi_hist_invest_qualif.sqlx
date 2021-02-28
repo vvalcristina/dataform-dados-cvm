@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  schema:"raw",
+  name: "cvm_fi_hist_invest_qualif",
+  description: ""
+}
