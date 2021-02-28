@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  schema:"staging"
+}
+select 
+  CNPJ_FUNDO,
+  DT_REG as DATA_REGISTRO,
+  CLASSE as CLASSE_FUNDO,
+  DT_INI_CLASSE as DATA_INICIO,
+  DT_FIM_CLASSE as DATA_FIM
+from 
+  ${ref("cvm_fi_hist_classe")}
+where 
+  CNPJ_FUNDO <> 'null'
+order by 
+  DT_REG DESC

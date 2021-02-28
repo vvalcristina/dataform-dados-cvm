@@ -1,0 +1,13 @@
+config {
+  type: "table",
+  schema: "refined",
+  assertions: {
+    nonNull: ["CNPJ_FUNDO","DATA_INICIO", "DATA_REGISTRO_FUNDO", "CNPJ_ADMINISTRADOR"]
+  }
+}
+select 
+  *
+from 
+  ${ref("dados_administrador")}
+order by 
+  DATA_REGISTRO_FUNDO DESC

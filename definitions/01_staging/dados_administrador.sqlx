@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  schema: "staging"
+}
+select 
+  CNPJ_FUNDO,
+  DT_REG as DATA_REGISTRO_FUNDO,
+  CNPJ_ADMIN as CNPJ_ADMINISTRADOR,
+  ADMIN	as ADMINISTRADOR_FUNDO,
+  DT_INI_ADMIN as DATA_INICIO,
+  DT_FIM_ADMIN as DATA_FIM
+from
+  ${ref("cvm_fi_hist_admin")}
+where 
+  CNPJ_FUNDO <>'null'
+  and DT_INI_ADMIN <>'null'
