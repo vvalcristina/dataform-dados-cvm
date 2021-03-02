@@ -1,0 +1,23 @@
+config {
+  type: "test",
+  dataset: "dados_gestor"
+}
+
+input "cvm_fi_hist_gestor" {
+select
+  '28.075.907/0001-39' as CNPJ_FUNDO,
+  '2017-08-08' as DT_REG,
+  'PF' as PF_PJ_GESTOR,
+  '000.541.308-75' as CPF_CNPJ_GESTOR,
+  'EDUARDO BRENNER' as GESTOR,
+  '2017-10-26' as DT_INI_GESTOR ,
+  '2017-12-14' as DT_FIM_GESTOR
+}
+select
+  '28.075.907/0001-39' as cnpj_fundo,
+  '2017-08-08' as data_registro,
+  'PF' as pessoa_gestor,
+  '000.541.308-75' as cpf_cnpj_gestor,
+  'EDUARDO BRENNER' as gestor,
+  '2017-10-26' as data_inicio,
+  '2017-12-14' as data_fim

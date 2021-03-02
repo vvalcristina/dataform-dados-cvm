@@ -3,11 +3,11 @@ config {
   schema:"staging"
 }
 select 
-  CNPJ_FUNDO,
-  DT_REG as DATA_REGISTRO,
-  CLASSE as CLASSE_FUNDO,
-  DT_INI_CLASSE as DATA_INICIO,
-  DT_FIM_CLASSE as DATA_FIM
+  CNPJ_FUNDO as cnpj_do_fundo,
+  CAST (DT_REG as string)as data_registro,
+  CLASSE as classe,
+  CAST (DT_INI_CLASSE as string) as data_inicio,
+  CAST (DT_FIM_CLASSE as string) as data_fim
 from 
   ${ref("cvm_fi_hist_classe")}
 where 

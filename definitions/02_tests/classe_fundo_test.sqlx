@@ -1,0 +1,18 @@
+config {
+  type: "test",
+  dataset: "classe_fundo"
+}
+input "cvm_fi_hist_classe" {
+  select 
+    '33.285.429/0001-21' as CNPJ_FUNDO,
+    '2021-02-26'as DT_REG,
+    'Fundo de Ações' as CLASSE,
+    '2019-03-19' as DT_INI_CLASSE,
+    'null' as DT_FIM_CLASSE
+}
+select 
+    '33.285.429/0001-21' as cnpj_do_fundo,
+    '2021-02-26'as data_registro,
+    'Fundo de Ações' as classe,
+    '2019-03-19' as data_inicio,
+    'null' as data_fim

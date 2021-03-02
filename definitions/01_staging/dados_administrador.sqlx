@@ -3,12 +3,12 @@ config {
   schema: "staging"
 }
 select 
-  CNPJ_FUNDO,
-  DT_REG as DATA_REGISTRO_FUNDO,
-  CNPJ_ADMIN as CNPJ_ADMINISTRADOR,
-  ADMIN	as ADMINISTRADOR_FUNDO,
-  DT_INI_ADMIN as DATA_INICIO,
-  DT_FIM_ADMIN as DATA_FIM
+  CNPJ_FUNDO as cnpj_fundo,
+  CAST (DT_REG as string) as data_registro_fundo,
+  CNPJ_ADMIN as cnpj_administrador,
+  ADMIN	as administrador,
+  CAST (DT_INI_ADMIN as string) as data_inicio,
+  CAST (DT_FIM_ADMIN as string) as data_fim
 from
   ${ref("cvm_fi_hist_admin")}
 where 
