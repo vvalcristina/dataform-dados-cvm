@@ -4,12 +4,12 @@ config {
 }
 select
   FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
-  CAST (CNPJ_FUNDO as string) as cnpj_fundo,
-  CAST (DT_REG as string) as data_registro_fundo,
-  CAST (CNPJ_ADMIN as string) as cnpj_administrador,
-  CAST (ADMIN as string)	as administrador,
-  CAST (DT_INI_ADMIN as string) as data_inicio,
-  CAST (DT_FIM_ADMIN as string) as data_fim
+  CAST (CNPJ_FUNDO as string),
+  CAST (DT_REG as string),
+  CAST (CNPJ_ADMIN as string),
+  CAST (ADMIN as string),
+  CAST (DT_INI_ADMIN as string),
+  CAST (DT_FIM_ADMIN as string)
 ))) as id,
   CAST (CNPJ_FUNDO as string) as cnpj_fundo,
   CAST (DT_REG as string) as data_registro_fundo,

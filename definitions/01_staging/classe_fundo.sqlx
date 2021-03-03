@@ -3,6 +3,13 @@ config {
   schema:"staging"
 }
 select 
+  FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
+    CAST (CNPJ_FUNDO as string),
+    CAST (DT_REG as string),
+    CAST (CLASSE as string),
+    CAST (DT_INI_CLASSE as string),
+    CAST (DT_FIM_CLASSE as string)
+  ))) as id_classe,
   CNPJ_FUNDO as cnpj_do_fundo,
   CAST (DT_REG as string)as data_registro,
   CLASSE as classe,

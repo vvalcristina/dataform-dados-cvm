@@ -4,6 +4,7 @@ config {
 }
 input "cvm_fi_hist_classe" {
   select 
+    6895799309819399000 as id_classe,
     '33.285.429/0001-21' as CNPJ_FUNDO,
     '2021-02-26'as DT_REG,
     'Fundo de Ações' as CLASSE,
@@ -11,6 +12,7 @@ input "cvm_fi_hist_classe" {
     'null' as DT_FIM_CLASSE
 }
 select 
+    6895799309819399000 as id_classe,
     '33.285.429/0001-21' as cnpj_do_fundo,
     '2021-02-26'as data_registro,
     'Fundo de Ações' as classe,
