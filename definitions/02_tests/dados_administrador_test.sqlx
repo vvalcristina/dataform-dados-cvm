@@ -3,7 +3,8 @@ config {
   dataset: "dados_administrador"
 }
 input "cvm_fi_hist_admin" {
-  select
+    select
+    -538593571746149900 as id,
     '01.675.497/0001-00' as CNPJ_FUNDO,
     '2005-04-22' as DT_REG,
     '33.850.686/0001-69' as CNPJ_ADMIN,
@@ -12,9 +13,11 @@ input "cvm_fi_hist_admin" {
     '2018-09-04' as DT_FIM_ADMIN
 }
 select
-  '01.675.497/0001-00' as cnpj_fundo,
-  '2005-04-22' as data_registro_fundo,
-  '33.850.686/0001-69' as cnpj_administrador,
-  'BRB DTVM SA'	as administrador,
-  '2013-11-18' as data_inicio,
-  '2018-09-04' as data_fim
+    -538593571746149900 as id,
+    '01.675.497/0001-00' as cnpj_fundo,
+    '2005-04-22' as data_registro_fundo,
+    '33.850.686/0001-69' as cnpj_administrador,
+    'BRB DTVM SA'	as administrador,
+    '2013-11-18' as data_inicio,
+    '2018-09-04' as data_fim
+      

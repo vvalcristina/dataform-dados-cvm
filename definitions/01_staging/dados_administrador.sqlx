@@ -2,13 +2,21 @@ config {
   type: "table",
   schema: "staging"
 }
-select 
-  CNPJ_FUNDO as cnpj_fundo,
+select
+  FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
+  CAST (CNPJ_FUNDO as string) as cnpj_fundo,
   CAST (DT_REG as string) as data_registro_fundo,
-  CNPJ_ADMIN as cnpj_administrador,
-  ADMIN	as administrador,
+  CAST (CNPJ_ADMIN as string) as cnpj_administrador,
+  CAST (ADMIN as string)	as administrador,
   CAST (DT_INI_ADMIN as string) as data_inicio,
   CAST (DT_FIM_ADMIN as string) as data_fim
+))) as id,
+  CAST (CNPJ_FUNDO as string) as cnpj_fundo,
+  CAST (DT_REG as string) as data_registro_fundo,
+  CAST (CNPJ_ADMIN as string) as cnpj_administrador,
+  CAST (ADMIN as string)	as administrador,
+  CAST (DT_INI_ADMIN as string) as data_inicio,
+  CAST (DT_FIM_ADMIN as string) as data_fim,
 from
   ${ref("cvm_fi_hist_admin")}
 where 
