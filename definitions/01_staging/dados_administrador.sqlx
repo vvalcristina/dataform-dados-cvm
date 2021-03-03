@@ -20,5 +20,5 @@ select
 from
   ${ref("cvm_fi_hist_admin")}
 where 
-  CNPJ_FUNDO <>'null'
-  and DT_INI_ADMIN <>'null'
+  CNPJ_FUNDO is not null
+  and DT_INI_ADMIN is not null

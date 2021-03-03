@@ -1,6 +1,10 @@
 config {
   type: "table",
-  schema: "refined"
+  schema: "refined",
+  assertions: {
+    uniqueKey: ["id"],
+    nonNull: ["id"]
+  }
 }
 select 
   *
