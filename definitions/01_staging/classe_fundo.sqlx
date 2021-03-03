@@ -18,6 +18,7 @@ select
 from 
   ${ref("cvm_fi_hist_classe")}
 where 
-  CNPJ_FUNDO <> 'null'
+  CNPJ_FUNDO is not null
+  and DT_INI_CLASSE < DT_FIM_CLASSE
 order by 
   DT_REG DESC

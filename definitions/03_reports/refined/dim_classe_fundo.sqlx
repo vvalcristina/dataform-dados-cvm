@@ -1,0 +1,12 @@
+config {
+  type: "table",
+  schema: "refined",
+  assertions :{
+    uniqueKey: ["id_classe"],
+    nonNull: ["cnpj_do_fundo", "data_registro"]
+  }
+}
+select 
+  * 
+from 
+  ${ref("classe_fundo")}

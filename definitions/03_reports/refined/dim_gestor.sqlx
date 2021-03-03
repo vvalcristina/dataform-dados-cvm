@@ -1,0 +1,11 @@
+config {
+  type: "table", 
+  schema: "refined",
+  assertions:{
+    nonNull: ["cnpj_fundo", "pessoa_gestor","data_registro"]
+  }
+}
+select
+  *
+from
+  ${ref("dados_gestor")}

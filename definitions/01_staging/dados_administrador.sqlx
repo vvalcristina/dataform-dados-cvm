@@ -22,3 +22,4 @@ from
 where 
   CNPJ_FUNDO is not null
   and DT_INI_ADMIN is not null
+  and DT_INI_ADMIN < DT_FIM_ADMIN
