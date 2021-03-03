@@ -5,6 +5,7 @@ config {
 
 input "cvm_fi_hist_gestor" {
 select
+  -8145671174890383000 as id_gestor,
   '28.075.907/0001-39' as CNPJ_FUNDO,
   '2017-08-08' as DT_REG,
   'PF' as PF_PJ_GESTOR,
@@ -14,6 +15,7 @@ select
   '2017-12-14' as DT_FIM_GESTOR
 }
 select
+  -8145671174890383000 as id_gestor,
   '28.075.907/0001-39' as cnpj_fundo,
   '2017-08-08' as data_registro,
   'PF' as pessoa_gestor,

@@ -3,6 +3,15 @@ config {
   schema: "staging"
 }
 select
+  FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
+  CAST (CNPJ_FUNDO as string),
+  CAST (DT_REG as string),
+  CAST (PF_PJ_GESTOR as string),
+  CAST (CPF_CNPJ_GESTOR as string),
+  CAST (GESTOR as string),
+  CAST (DT_INI_GESTOR as string),
+  CAST (DT_FIM_GESTOR as string)
+))) as id_gestor,
   CNPJ_FUNDO as cnpj_fundo,
   CAST (DT_REG as string) as data_registro,
   PF_PJ_GESTOR as pessoa_gestor,
@@ -13,5 +22,5 @@ select
 from
   ${ref("cvm_fi_hist_gestor")}
 where 
-  PF_PJ_GESTOR <> 'null'
-  and CNPJ_FUNDO <> 'null'
+  PF_PJ_GESTOR is not null
+  and CNPJ_FUNDO is not null
