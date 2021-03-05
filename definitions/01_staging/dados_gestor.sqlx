@@ -3,7 +3,7 @@ config {
   schema: "staging"
 }
 select
-  FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
+  distinct FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
   CAST (CNPJ_FUNDO as string),
   CAST (DT_REG as string),
   CAST (PF_PJ_GESTOR as string),
