@@ -1,0 +1,7 @@
+config {
+  type: "view",
+  schema: "staging"
+}
+with administrador as (
+  select 
+)

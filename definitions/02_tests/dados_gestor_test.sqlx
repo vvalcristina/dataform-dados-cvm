@@ -17,9 +17,9 @@ select
 select
   -8145671174890383000 as id_gestor,
   '28.075.907/0001-39' as cnpj_fundo,
-  '2017-08-08' as data_registro,
+  '2017-08-08' as data_registro_gestor,
   'PF' as pessoa_gestor,
   '000.541.308-75' as cpf_cnpj_gestor,
   'EDUARDO BRENNER' as gestor,
-  '2017-10-26' as data_inicio,
-  '2017-12-14' as data_fim
+  '2017-10-26' as data_inicio_gestor,
+  '2017-12-14' as data_fim_gestor

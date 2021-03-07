@@ -10,13 +10,13 @@ select
   CAST (ADMIN as string),
   CAST (DT_INI_ADMIN as string),
   CAST (DT_FIM_ADMIN as string)
-))) as id,
+))) as id_admin,
   CAST (CNPJ_FUNDO as string) as cnpj_fundo,
-  CAST (DT_REG as string) as data_registro_fundo,
+  CAST (DT_REG as string) as data_registro_admin,
   CAST (CNPJ_ADMIN as string) as cnpj_administrador,
   CAST (ADMIN as string)	as administrador,
-  CAST (DT_INI_ADMIN as string) as data_inicio,
-  CAST (DT_FIM_ADMIN as string) as data_fim,
+  CAST (DT_INI_ADMIN as string) as data_inicio_admin,
+  CAST (DT_FIM_ADMIN as string) as data_fim_admin,
 from
   ${ref("cvm_fi_hist_admin")}
 where 

@@ -13,8 +13,8 @@ select
   CNPJ_FUNDO as cnpj,
   CAST (DT_REG as string) as data_registro,
   RENTAB_FUNDO as rentabilidade,
-  CAST (DT_INI_RENTAB as string) as data_inicio,
-  CAST (DT_FIM_RENTAB as string) as data_fim
+  CAST (DT_INI_RENTAB as string) as data_inicio_rent,
+  CAST (DT_FIM_RENTAB as string) as data_fim_rent
 from 
   ${ref("cvm_fi_hist_rentab")}
 where 

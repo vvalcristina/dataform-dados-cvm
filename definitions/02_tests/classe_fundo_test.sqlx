@@ -14,7 +14,7 @@ input "cvm_fi_hist_classe" {
 select 
     6895799309819399000 as id_classe,
     '33.285.429/0001-21' as cnpj_do_fundo,
-    '2021-02-26'as data_registro,
+    '2021-02-26'as data_registro_classe,
     'Fundo de Ações' as classe,
-    '2019-03-19' as data_inicio,
-    'null' as data_fim
+    '2019-03-19' as data_inicio_classe,
+    'null' as data_fim_classe

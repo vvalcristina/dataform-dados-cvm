@@ -13,12 +13,12 @@ select
   CAST (DT_FIM_GESTOR as string)
 ))) as id_gestor,
   CNPJ_FUNDO as cnpj_fundo,
-  CAST (DT_REG as string) as data_registro,
+  CAST (DT_REG as string) as data_registro_gestor,
   PF_PJ_GESTOR as pessoa_gestor,
   CPF_CNPJ_GESTOR as cpf_cnpj_gestor,
   GESTOR as gestor,
-  CAST (DT_INI_GESTOR as string) as data_inicio,
-  CAST (DT_FIM_GESTOR as string) as data_fim
+  CAST (DT_INI_GESTOR as string) as data_inicio_gestor,
+  CAST (DT_FIM_GESTOR as string) as data_fim_gestor
 from
   ${ref("cvm_fi_hist_gestor")}
 where 

@@ -11,10 +11,10 @@ select
     CAST (DT_FIM_CLASSE as string)
   ))) as id_classe,
   CNPJ_FUNDO as cnpj_do_fundo,
-  CAST (DT_REG as string)as data_registro,
+  CAST (DT_REG as string)as data_registro_classe,
   CLASSE as classe,
-  CAST (DT_INI_CLASSE as string) as data_inicio,
-  CAST (DT_FIM_CLASSE as string) as data_fim
+  CAST (DT_INI_CLASSE as string) as data_inicio_classe,
+  CAST (DT_FIM_CLASSE as string) as data_fim_classe
 from 
   ${ref("cvm_fi_hist_classe")}
 where 
