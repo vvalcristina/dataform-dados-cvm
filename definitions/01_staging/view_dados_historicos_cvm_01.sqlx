@@ -4,4 +4,20 @@ config {
 }
 with administrador as (
   select 
+    *
+  from 
+  ${ref("dados_administrador")}
 )
+select 
+  *
+from
+  administrador as admin
+  inner join
+    ${ref("classe_fundo")} as classe
+    on admin.cnpj_fundo = classe.cnpj_do_fundo
+  inner join
+    ${ref("dados_gestor")} as gestor 
+    on admin.cnpj_fundo =  gestor.cnpj_fundo_gestor
+  inner join 
+    ${ref("rentabilidade")} as rent
+    on gestor.cnpj_fundo_gestor = rent.cnpj

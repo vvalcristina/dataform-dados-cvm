@@ -12,7 +12,7 @@ select
   CAST (DT_INI_GESTOR as string),
   CAST (DT_FIM_GESTOR as string)
 ))) as id_gestor,
-  CNPJ_FUNDO as cnpj_fundo,
+  CNPJ_FUNDO as cnpj_fundo_gestor,
   CAST (DT_REG as string) as data_registro_gestor,
   PF_PJ_GESTOR as pessoa_gestor,
   CPF_CNPJ_GESTOR as cpf_cnpj_gestor,
