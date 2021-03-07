@@ -16,6 +16,8 @@ Para este projeto especificamente vamos explorar a integração do Dataform com 
 
 ## Modelagem dos dados CVM 555
 
+Os dados foram modelados conforme a modelagem estrela, com uma tabela fato e quatro dimensões.
+
 ![Untitled Diagram (1)](https://user-images.githubusercontent.com/52939036/110255038-994da780-7f70-11eb-947f-498f6b67fbb7.png)
 
 
