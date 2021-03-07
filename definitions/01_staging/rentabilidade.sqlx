@@ -20,4 +20,3 @@ from
 where 
 CNPJ_FUNDO is not null
 and DT_REG is not null
-order by CNPJ_FUNDO
