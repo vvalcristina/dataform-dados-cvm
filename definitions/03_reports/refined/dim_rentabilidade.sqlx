@@ -1,0 +1,12 @@
+config {
+  type: "table",
+  schema: "refined",
+  assertions: {
+    uniqueKey: ["id_rentabilidade"],
+    nonNull: ["cnpj", "data_registro", "id_rentabilidade"]
+  }
+}
+select
+  *
+from 
+  ${ref("rentabilidade")}
