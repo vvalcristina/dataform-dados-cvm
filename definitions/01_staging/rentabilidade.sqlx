@@ -1,0 +1,23 @@
+config {
+  type: "table",
+  schema: "staging"
+}
+select
+  FARM_FINGERPRINT(TO_JSON_STRING(STRUCT(
+  CAST (CNPJ_FUNDO as string),
+  CAST (DT_REG as string),
+  CAST (RENTAB_FUNDO as string),
+  CAST (DT_INI_RENTAB as string),
+  CAST (DT_FIM_RENTAB as string)
+))) as id_rentabilidade,
+  CNPJ_FUNDO as cnpj,
+  CAST (DT_REG as string) as data_registro,
+  RENTAB_FUNDO as rentabilidade,
+  CAST (DT_INI_RENTAB as string) as data_inicio,
+  CAST (DT_FIM_RENTAB as string) as data_fim
+from 
+  ${ref("cvm_fi_hist_rentab")}
+where 
+CNPJ_FUNDO is not null
+and DT_REG is not null
+order by CNPJ_FUNDO
