@@ -1,0 +1,11 @@
+config {
+  type: "table",
+  schema: "refined",
+  assertions: {
+    nonNull: ["id_admin", "id_gestor", "id_classe", "id_rentabilidade"]
+  }
+}
+select 
+  *
+from
+  ${ref("view_dados_historicos_cvm_02")}
