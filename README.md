@@ -12,7 +12,7 @@ Para este projeto especificamente vamos explorar a integração do Dataform com 
 
 ## Arquitetura
 
-
+![Untitled Diagram (2)](https://user-images.githubusercontent.com/52939036/110257298-06b30580-7f7c-11eb-94ef-2dab26fcf9a7.png)
 
 ## Modelagem dos dados CVM 555
 
@@ -27,7 +27,7 @@ Com o objetivo de acelar o desenvolvimento a estrutura do projeto foi desenvolvi
 ├── definitions         <- Pasta principal do projeto.
     ├──00_source        <- Pasta onde declara-se os dados de entrada do sistema.
         ├──raw          <- Pasta onde estão os dados brutos da CVM
-    ├──01_staging       <- Pasta onde ocorrem as transformações de dados intermediárias (joins, criação de chaves surrogadas, unions).
+    ├──01_staging       <- Pasta onde ocorrem as transformações de dados intermediárias.
     ├──02_tests         <- Pasta de testes do projeto.
         ├──unit         <- Pasta de testes unitários: testam a lógica da modelagem.
     ├──03_reports       <- Pasta que contém os resultados da modelagem (fatos, dimensões).
