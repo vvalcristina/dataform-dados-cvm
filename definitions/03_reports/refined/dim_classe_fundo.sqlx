@@ -3,7 +3,7 @@ config {
   schema: "refined",
   assertions :{
     uniqueKey: ["id_classe"],
-    nonNull: ["cnpj_do_fundo", "data_registro"]
+    nonNull: ["id_classe","cnpj_do_fundo", "data_registro_classe"]
   }
 }
 select 

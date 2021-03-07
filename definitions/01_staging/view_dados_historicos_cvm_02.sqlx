@@ -1,0 +1,31 @@
+config {
+  type: "view",
+  schema: "staging"
+}
+select
+  id_admin,
+  cnpj_fundo,
+  data_registro_admin,
+  cnpj_administrador as cnpj_admin,
+  administrador,
+  data_inicio_admin,
+  data_fim_admin,
+  id_classe,
+  data_registro_classe,
+  classe,
+  data_inicio_classe,
+  data_fim_classe,
+  id_gestor,
+  data_registro_gestor,
+  pessoa_gestor,
+  cpf_cnpj_gestor,
+  gestor,
+  data_inicio_gestor,
+  data_fim_gestor,
+  id_rentabilidade,
+  data_registro as data_registro_rent,
+  rentabilidade,
+  data_inicio_rent,
+  data_fim_rent
+from
+  ${ref("view_dados_historicos_cvm_01")}

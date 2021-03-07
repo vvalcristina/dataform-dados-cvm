@@ -3,7 +3,7 @@ config {
   schema: "refined",
   assertions:{
     uniqueKey : ["id_gestor"],
-    nonNull: ["id_gestor", "cnpj_fundo", "cpf_cnpj_gestor"]
+    nonNull: ["id_gestor", "cnpj_fundo_gestor", "cpf_cnpj_gestor"]
   }
 }
 select

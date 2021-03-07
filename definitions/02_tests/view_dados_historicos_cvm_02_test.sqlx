@@ -1,30 +1,22 @@
 config {
   type: "test",
-  dataset: "view_dados_historicos_cvm_01"
+  dataset: "view_dados_historicos_cvm_02"
 }
-
-input "dados_administrador" {
-  select
+input "view_dados_historicos_cvm_01" {
+  select 
     -21332113218712551 as id_admin,
     "05.491.567/0001-21" as cnpj_fundo,
     "2005-03-22" as data_registro_admin,
     "01.522.368/0001-82" as cnpj_administrador,
     "BANCO BNP PARIBAS BRASIL S/A" as administrador,
     "2005-03-21" as data_inicio_admin,
-    "2016-11-24" as data_fim_admin
-}
-input "classe_fundo" {
-  select
+    "2016-11-24" as data_fim_admin,
     -7860349436926082813 as id_classe,
     "05.491.567/0001-21" as cnpj_do_fundo,
     "2005-03-22" as data_registro_classe,
     "Fundo Cambial" as classe,
     "2005-03-21" as data_inicio_classe,
-    "2008-11-28" as data_fim_classe
-}
-
-input "dados_gestor" {
-  select
+    "2008-11-28" as data_fim_classe,
     -2484612740035277991 as id_gestor,
     "05.491.567/0001-21" as cnpj_fundo_gestor,
     "2005-03-22" as data_registro_gestor,
@@ -32,10 +24,7 @@ input "dados_gestor" {
     "02.562.663/0001-25" as cpf_cnpj_gestor,
     "BNP PARIBAS ASSET MANAGEMENT BRASIL LTDA" as gestor,
     "2003-03-14" as data_inicio_gestor,
-    "2016-11-24" as data_fim_gestor
-}
-input "rentabilidade" {
-  select
+    "2016-11-24" as data_fim_gestor,
     -7894006515129742726 as id_rentabilidade,
     "05.491.567/0001-21" as cnpj,
     "2005-03-22" as data_registro,
@@ -43,22 +32,20 @@ input "rentabilidade" {
     "2005-03-21" as data_inicio_rent,
     "2008-11-28" as data_fim_rent
 }
-select 
+select
   -21332113218712551 as id_admin,
   "05.491.567/0001-21" as cnpj_fundo,
   "2005-03-22" as data_registro_admin,
-  "01.522.368/0001-82" as cnpj_administrador,
+  "01.522.368/0001-82" as cnpj_admin,
   "BANCO BNP PARIBAS BRASIL S/A" as administrador,
   "2005-03-21" as data_inicio_admin,
   "2016-11-24" as data_fim_admin,
   -7860349436926082813 as id_classe,
-  "05.491.567/0001-21" as cnpj_do_fundo,
   "2005-03-22" as data_registro_classe,
   "Fundo Cambial" as classe,
   "2005-03-21" as data_inicio_classe,
   "2008-11-28" as data_fim_classe,
   -2484612740035277991 as id_gestor,
-  "05.491.567/0001-21" as cnpj_fundo_gestor,
   "2005-03-22" as data_registro_gestor,
   "PJ" as pessoa_gestor,
   "02.562.663/0001-25" as cpf_cnpj_gestor,
@@ -66,9 +53,7 @@ select
   "2003-03-14" as data_inicio_gestor,
   "2016-11-24" as data_fim_gestor,
   -7894006515129742726 as id_rentabilidade,
-  "05.491.567/0001-21" as cnpj,
-  "2005-03-22" as data_registro,
+  "2005-03-22" as data_registro_rent,
   "Euro" as rentabilidade,
   "2005-03-21" as data_inicio_rent,
   "2008-11-28" as data_fim_rent
-

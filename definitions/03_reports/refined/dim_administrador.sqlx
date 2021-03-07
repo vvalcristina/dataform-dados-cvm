@@ -2,8 +2,8 @@ config {
   type: "table",
   schema: "refined",
   assertions: {
-    uniqueKey: ["id"],
-    nonNull: ["id", "cnpj_fundo", "data_inicio"]
+    uniqueKey: ["id_admin"],
+    nonNull: ["id_admin", "cnpj_fundo", "data_inicio_admin"]
   }
 }
 select 
