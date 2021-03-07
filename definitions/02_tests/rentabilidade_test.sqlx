@@ -1,0 +1,21 @@
+config {
+  type: "test",
+  dataset: "rentabilidade"
+}
+
+input "cvm_fi_hist_rentab" {
+  select
+    7961398812905759178 as id_rentabilidade,
+    "00.000.744/0001-06" as CNPJ_FUNDO,
+    "2005-01-13" as DT_REG,
+    "DI de um dia" as RENTAB_FUNDO,
+    "2005-01-01" as DT_INI_RENTAB,
+    "null" as DT_FIM_RENTAB
+}
+select
+  7961398812905759178 as id_rentabilidade,
+  "00.000.744/0001-06" as cnpj,
+  "2005-01-13" as data_registro,
+  "DI de um dia" as rentabilidade,
+  "2005-01-01" as data_inicio,
+  "null" as data_fim
