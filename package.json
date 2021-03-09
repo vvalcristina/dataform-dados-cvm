@@ -1,5 +1,6 @@
 {
     "dependencies": {
-        "@dataform/core": "1.18.0"
+        "@dataform/core": "1.17.2",
+        "dataform-scd": "git+https://github.com/dataform-co/dataform-scd.git#0.1"
     }
 }
